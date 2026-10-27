@@ -5,11 +5,10 @@
 | Date | Author | Change |
 | --- | --- | --- |
 | 2026-10-27 | @sky-yeom (with Copilot) | Initial draft from the concept doc (`penrose.pdf`) and [01 · Market Research](01-market-research.md) |
-| 2026-10-27 | @sky-yeom (with Copilot) | Language scope changed to English only (Korean localization removed; the Korean cultural setting stays) |
 
 ## Overview
 
-*Penrose* is a 2D hand-drawn psychological horror game. It presents itself as a harmless character-customization / self-improvement game. The player is actually trapped in a house that loops like the Penrose stairs, every "improvement" they choose is destroying the protagonist, and **their choices decide which of four endings she reaches**.
+*Penrose* is a 2D hand-drawn psychological horror game. It presents itself as a harmless character-customization / self-improvement game. The player is actually trapped in a house that loops like the Penrose stairs, every "improvement" they choose is destroying the protagonist, and **their choices decide which of four endings the protagonist reaches**. The protagonist can be **male or female**; the player chooses at character creation.
 
 The game is rooted in the creator's lived experience of Korean beauty standards (plastic surgery as a graduation gift, social-media comparison, family pressure framed as love). Its core message: perfection is an illusion, and personal choice and external pressure can't be separated.
 
@@ -52,10 +51,10 @@ The loop, the decay and the reveal are the product. Every system exists to make 
 | Actor | Role | Responsibility in the product |
 | --- | --- | --- |
 | **The player** | Decision-maker | Makes every choice; is meant to feel complicit, not like a bystander |
-| **The protagonist** | Player character | A young woman around graduation age who is "built" by the player; her true self erodes as masks pile up. Name and background still open (Q1) |
-| **The rooms** (Parents, Friends, Social Media) | Sources of pressure | Each one demands a version of her: the perfect daughter, the harmless friend, the filtered self. The quiz decides which room is loudest |
-| **The mirror / Reflection** | Truth-teller | Shows the "improved" her, then the damage. May speak, sparingly |
-| **The rose** | Health bar and symbol | A rose in a glass case that loses petals and bleeds as she loses herself; the visible stakes of the endings |
+| **The protagonist** | Player character | A young man or woman around graduation age, chosen at character creation and "built" by the player; their true self erodes as masks pile up. Name and background still open (Q1) |
+| **The rooms** (Parents, Friends, Social Media) | Sources of pressure | Each one demands a version of them: the perfect son or daughter, the harmless friend, the filtered self. The quiz decides which room is loudest |
+| **The mirror / Reflection** | Truth-teller | Shows the "improved" protagonist, then the damage. May speak, sparingly |
+| **The rose** | Health bar and symbol | A rose in a glass case that loses petals and bleeds as the protagonist loses themselves; the visible stakes of the endings |
 | **The house** | The loop | Penrose-stairs architecture that pretends you're making progress while sending you back to the start |
 | **The Gumiho (fox)** | Folklore presence | Consuming yourself to become acceptable. Role still open (Q2) |
 
@@ -78,7 +77,7 @@ Full personas: [Market Research §9](01-market-research.md#9-target-audience-per
 
 ## User scenarios
 
-1. *A horror fan picks up what looks like a self-improvement game.* Today: disguised-genre horror games hide supernatural monsters. With Penrose: the "monster" is beauty standards and the people who love her, and the player realizes they caused the damage themselves.
+1. *A horror fan picks up what looks like a self-improvement game.* Today: disguised-genre horror games hide supernatural monsters. With Penrose: the "monster" is beauty standards and the people who love you, and the player realizes they caused the damage themselves.
 2. *A player finishes and wonders what else could have happened.* Today: many narrative horror games have one fixed ending. With Penrose: the ending reflects their choices, the ending summary shows what the quiz and their choices said about them, and they start a second run to reach a different ending.
 3. *A player with lived experience of dysmorphia is hesitant.* Today: they either avoid the game or get blindsided. With Penrose: clear content warnings, an intensity setting and support resources let them play on their own terms and still reach every ending.
 4. *A streamer plays blind.* Today: they need a short game with a twist that works on camera. With Penrose: chat spots the repeating wallpaper before the streamer does, the Loop 3 reveal is a big reaction moment, and viewers argue about which ending is "right".
@@ -122,7 +121,7 @@ P0 is the **MVP**: if any P0 item is missing, it isn't Penrose. The first build 
 
 1. **Act 0 personality quiz**: a friendly-seeming quiz that secretly measures whose approval the player values most, what they value, and how they react to criticism, with no visible sign that it is measuring anything.
 2. **Quiz-weighted rooms**: Parents', Friends' and Social Media rooms, plus a Mirror Room where the damage is faced. The quiz profile changes which room's pressure is loudest.
-3. **Permanent self-improvement choices and masks**: physical and style "upgrades" and a mask per room. Each choice locks in after a short undo window (about 5 seconds; decision time and undo use are recorded).
+3. **Character creation and permanent self-improvement choices**: the player picks a male or female protagonist, then makes physical and style "upgrades" and builds a mask per room. Upgrade paths follow real gendered ideals (e.g. thinness and facial surgery, or muscle and height) but either protagonist can face any pressure. Each choice locks in after a short undo window (about 5 seconds; decision time and undo use are recorded).
 4. **The hidden loop**: the house loops without ever admitting it, and characters gaslight the player ("Didn't we already talk about this? …No, first time, I swear").
 5. **Decay across loops**: rose, mirrors, reflection, room details, dialogue and lighting each have four states (Loop 1, 2, 3, 4+), as in the concept doc §7 table.
 6. **The reveal**: in Loop 3, each upgrade is shown for what it really was. It respects the intensity setting.
@@ -183,7 +182,7 @@ Decided so far: core message, setting, room roles, the hidden loop and its denia
 | # | Question | Decide in |
 | --- | --- | --- |
 | Q1 | Protagonist's name, age and background | GDD #4 |
-| Q2 | The Gumiho's role: guide, villain, the protagonist herself, or symbol only | GDD #4 |
+| Q2 | The Gumiho's role: guide, villain, the protagonist themselves, or symbol only | GDD #4 |
 | Q3 | Is there a point of no return, and when? | GDD #4 |
 | Q4 | Which loop-breaking mechanic(s) resolve the game? | GDD #4 |
 | Q5 | How autobiographical vs. fictional is the story? | GDD #4 |
