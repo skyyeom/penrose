@@ -32,7 +32,8 @@ The game is rooted in the creator's lived experience of Korean beauty standards 
 ```mermaid
 flowchart TD
     Q[Act 0: friendly quiz] -->|secretly profiles whose approval matters| W[Room weighting]
-    W --> R[Rooms: Parents' · Friends' · Social Media · Mirror]
+    W --> R[Rooms: Family · Friends & Partner · Society · Social Media]
+    R <-->|between rooms| B[Bathroom: check appearance and status]
     R --> C[Player chooses 'upgrades' and builds masks]
     C -->|5-second undo window, then locks in| S[Hidden stats: Self-Perception · Exhaustion · Authenticity]
     S --> D[House decays: rose, mirrors, reflection, dialogue, lighting, music]
@@ -52,8 +53,9 @@ The loop, the decay and the reveal are the product. Every system exists to make 
 | --- | --- | --- |
 | **The player** | Decision-maker | Makes every choice; is meant to feel complicit, not like a bystander |
 | **The protagonist** | Player character | A young man or woman around graduation age, chosen at character creation and "built" by the player; their true self erodes as masks pile up. Name and background still open (Q1) |
-| **The rooms** (Parents, Friends, Social Media) | Sources of pressure | Each one demands a version of them: the perfect son or daughter, the harmless friend, the filtered self. The quiz decides which room is loudest |
-| **The mirror / Reflection** | Truth-teller | Shows the "improved" protagonist, then the damage. May speak, sparingly |
+| **The four rooms** | Sources of pressure | **Family** (parents and extended family), **Friends & Partner** (friends and a significant other), **Society** (coworkers, bosses, interviewers), **Social Media** (followers, strangers, the algorithm). Each demands a version of the protagonist: the perfect son or daughter, the easy-going friend and ideal partner, the presentable employee, the filtered self. The quiz decides which room is loudest |
+| **The Bathroom** | Self-check | Not a source of pressure but the place the protagonist checks themselves: the mirror shows their appearance, and their "status" (how each room currently sees them). Visited between rooms |
+| **The mirror / Reflection** | Truth-teller | Lives in the Bathroom. Shows the "improved" protagonist, then the damage. May speak, sparingly |
 | **The rose** | Health bar and symbol | A rose in a glass case that loses petals and bleeds as the protagonist loses themselves; the visible stakes of the endings |
 | **The house** | The loop | Penrose-stairs architecture that pretends you're making progress while sending you back to the start |
 | **The Gumiho (fox)** | Folklore presence | Consuming yourself to become acceptable. Role still open (Q2) |
@@ -117,10 +119,10 @@ Full personas: [Market Research §9](01-market-research.md#9-target-audience-per
 
 ### P0 — must exist for the game to be Penrose
 
-P0 is the **MVP**: if any P0 item is missing, it isn't Penrose. The first build to prove it is a **vertical slice** (the quiz, then the Parents' Room and the Mirror Room at final art quality, through all four decay states, ending in one ending).
+P0 is the **MVP**: if any P0 item is missing, it isn't Penrose. The first build to prove it is a **vertical slice** (the quiz, then the Family Room and the Bathroom at final art quality, through all four decay states, ending in one ending).
 
 1. **Act 0 personality quiz**: a friendly-seeming quiz that secretly measures whose approval the player values most, what they value, and how they react to criticism, with no visible sign that it is measuring anything.
-2. **Quiz-weighted rooms**: Parents', Friends' and Social Media rooms, plus a Mirror Room where the damage is faced. The quiz profile changes which room's pressure is loudest.
+2. **Four quiz-weighted rooms and the Bathroom**: Family, Friends & Partner, Society and Social Media rooms, each one a source of pressure. The quiz profile changes which room's pressure is loudest. Between rooms, the Bathroom lets the protagonist check their appearance and status in the mirror; it's also where the damage is eventually faced.
 3. **Character creation and permanent self-improvement choices**: the player picks a male or female protagonist, then makes physical and style "upgrades" and builds a mask per room. Upgrade paths follow real gendered ideals (e.g. thinness and facial surgery, or muscle and height) but either protagonist can face any pressure. Each choice locks in after a short undo window (about 5 seconds; decision time and undo use are recorded).
 4. **The hidden loop**: the house loops without ever admitting it, and characters gaslight the player ("Didn't we already talk about this? …No, first time, I swear").
 5. **Decay across loops**: rose, mirrors, reflection, room details, dialogue and lighting each have four states (Loop 1, 2, 3, 4+), as in the concept doc §7 table.
@@ -147,7 +149,7 @@ P0 is the **MVP**: if any P0 item is missing, it isn't Penrose. The first build 
 
 ### P2 — if time allows
 
-23. **Bedroom**: a possible safe space, which may not really be one.
+23. **Extra rooms** (e.g. a Bedroom as a possible safe space) only if the five core spaces are finished.
 24. **The Gumiho**: in-scene fox presence, once its role is decided (Q2).
 25. **Steam Deck support**: full controller support and text readable at 1280×800.
 26. **Opt-in, anonymous telemetry** for playtests and launch (events defined in #10).
