@@ -5,6 +5,7 @@
 | Date | Author | Change |
 | --- | --- | --- |
 | 2026-10-27 | @sky-yeom (with Copilot) | Initial draft from the concept doc (`penrose.pdf`) and [01 · Market Research](01-market-research.md) |
+| 2026-10-27 | @sky-yeom (with Copilot) | Language scope changed to English only (Korean localization removed; the Korean cultural setting stays) |
 
 ## Overview
 
@@ -19,7 +20,7 @@ The game is rooted in the creator's lived experience of Korean beauty standards 
 | Platform | **Steam** (Windows, macOS) at launch; a free slice on **itch.io**; consoles and mobile only after launch |
 | Business model | Premium, about **$12.99** (range $9.99–$14.99). No microtransactions |
 | Length | **2–5 h** first playthrough, replayable for other endings |
-| Languages | **English + Korean** at launch |
+| Languages | **English only** |
 | Art & sound | Black, white and red pen-and-ink (webtoon/anime linework); distorted K-pop that decays each loop |
 | Engine | **Godot 4** (free, no royalties, strong 2D; final call in #8) |
 | Team | Owner (@sky-yeom): PM, design, art. Programming, music and a sensitivity reviewer still to be found |
@@ -81,7 +82,7 @@ Full personas: [Market Research §9](01-market-research.md#9-target-audience-per
 2. *A player finishes and wonders what else could have happened.* Today: many narrative horror games have one fixed ending. With Penrose: the ending reflects their choices, the ending summary shows what the quiz and their choices said about them, and they start a second run to reach a different ending.
 3. *A player with lived experience of dysmorphia is hesitant.* Today: they either avoid the game or get blindsided. With Penrose: clear content warnings, an intensity setting and support resources let them play on their own terms and still reach every ending.
 4. *A streamer plays blind.* Today: they need a short game with a twist that works on camera. With Penrose: chat spots the repeating wallpaper before the streamer does, the Loop 3 reveal is a big reaction moment, and viewers argue about which ending is "right".
-5. *A Korean player starts the game.* Today: most horror games are translated into Korean. With Penrose: the script is written by a native speaker, and the details (graduation-gift surgery, subway ads, family dynamics) are familiar rather than exotic.
+5. *A player unfamiliar with Korean culture starts the game.* Today: culturally specific games either over-explain or turn the culture into exotic decoration. With Penrose: the details (graduation-gift surgery, subway ads, family dynamics) are woven into the English script, specific enough to feel real and clear enough to follow without a glossary.
 
 ## Product principles
 
@@ -91,7 +92,7 @@ Full personas: [Market Research §9](01-market-research.md#9-target-audience-per
 4. **The game lies; the design doesn't.** The house and its characters gaslight the player, but content warnings, settings and the store page are honest.
 5. **Warn first, let players choose.** Graphic content is opt-down, never a surprise ambush, and there is always a way to reach support resources.
 6. **Symbolic, not instructional.** Body horror is surreal and meaningful, never a how-to (follow established safe-messaging guidelines for self-harm and eating disorders).
-7. **Specific, not exotic.** Korean cultural detail is accurate and lived-in, and a native Korean speaker checks the script.
+7. **Specific, not exotic.** Korean cultural detail is accurate and lived-in, drawn from the creator's own experience.
 
 ## Goals (in scope)
 
@@ -100,7 +101,7 @@ Full personas: [Market Research §9](01-market-research.md#9-target-audience-per
 - Make every choice permanent after a short undo window, and make choices decide which of four endings the player reaches.
 - Make the house visibly decay every loop (rose, mirrors, reflection, room details, dialogue, lighting, music).
 - Give players control of the experience: content warnings, an intensity setting, a photosensitivity mode, accessibility basics and support resources.
-- Ship on Steam (Windows, macOS) in English and Korean, with a free itch.io slice and a Steam Next Fest demo beforehand.
+- Ship on Steam (Windows, macOS) in English, with a free itch.io slice and a Steam Next Fest demo beforehand.
 - Build an audience before launch: about 10,000 wishlists through a devlog, the itch.io slice and Next Fest.
 
 ## Non-goals (out of scope for this product)
@@ -127,10 +128,10 @@ P0 is the **MVP**: if any P0 item is missing, it isn't Penrose. The first build 
 6. **The reveal**: in Loop 3, each upgrade is shown for what it really was. It respects the intensity setting.
 7. **Hidden stats**: Self-Perception, Exhaustion and Authenticity track what is really happening and feed the endings.
 8. **Four endings decided by choices**: Bad, Neutral, Good, Special. All reachable, none soft-locked. The exact trigger rule is decided in the GDD (Q7).
-9. **Player safety**: content warnings on first launch and on the store page, an intensity setting that tones down graphic body horror without removing story or endings, a photosensitivity mode that removes the Loop 4+ strobing, and a support-resources screen (global and Korean) reachable from the menu and after every ending.
+9. **Player safety**: content warnings on first launch and on the store page, an intensity setting that tones down graphic body horror without removing story or endings, a photosensitivity mode that removes the Loop 4+ strobing, and a support-resources screen (international) reachable from the menu and after every ending.
 10. **Accessibility baseline**: text size and speed, rebindable controls, captions for important sounds, and a non-colour cue (shape or motion) for everything red signals.
 11. **Save / load**: autosave at room transitions, plus manual slots.
-12. **English + Korean**, with a natively written Korean script.
+12. **English script** that makes Korean cultural details clear without over-explaining them.
 13. **Steam release for Windows and macOS**, with cloud saves.
 
 ### P1 — what makes it memorable and replayable
@@ -158,7 +159,7 @@ P0 is the **MVP**: if any P0 item is missing, it isn't Penrose. The first build 
 - Paid cosmetics, an in-game shop or any real-money "upgrades".
 - A deep fashion or wardrobe system with many items. Customization stays small and meaningful.
 - An open-ended sandbox house. The loop is authored.
-- Full voice acting, and languages beyond English and Korean, at launch.
+- Full voice acting, and any language other than English.
 - Console and mobile versions at launch.
 
 ## Success metrics
@@ -171,7 +172,6 @@ P0 is the **MVP**: if any P0 item is missing, it isn't Penrose. The first build 
 - **50% or more** of players reach an ending; **25% or more** of those start a second run.
 - **The loop and the complicity land** in playtests: 70% or more notice the loop by Loop 3, and 70% or more say they felt responsible.
 - **At least 5 creator videos or streams** from channels with 100k+ subscribers within 60 days of launch.
-- **At least 10%** of reviews written in Korean within 90 days.
 - **Zero marketing assets** that show "ugly → fixed" played straight or spoil the reveal.
 
 **Baseline required first.** The playtest targets can't be checked until there's something to play. The vertical slice (quiz plus two rooms through all four decay states) is the first playtest baseline (#15). Sales and wishlist targets come from the comparable games in [Market Research §11](01-market-research.md#11-opportunity-sizing--benchmarks).
