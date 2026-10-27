@@ -4,7 +4,7 @@
 >
 > **Question this doc answers:** what should the opening quiz ask so that it quietly finds out **whose approval matters most** to the player, **what they value**, and **how they react to criticism**, while feeling like a random, harmless personality quiz? It must work for male and female players alike.
 >
-> **v2 changes:** questions are now indirect (no mention of parents, friends, work or followers); rooms updated to Family, Friends & Partner, Society, Social Media + Bathroom; added a final honesty question.
+> **v2 changes:** questions are now indirect (no mention of parents, friends, work or followers); rooms updated to Family, Friends & Partner, Society, Social Media + Bathroom; added a final yes/no honesty question.
 
 ---
 
@@ -52,7 +52,7 @@ Asking directly ("Whose approval matters to you?") gets the answer people *want*
 | **F** | **Core belief** | not good enough · unlovable · a burden · invisible · a fake | CBT downward arrow (Beck; Burns); Young schemas (defectiveness, approval-seeking, social isolation) | What **the Reflection** says in Loops 3–4 |
 | **G** | **Baseline self-image** | 0–10 | Solution-focused scaling question | Starting Self-Perception; asked again at the ending |
 | **H** | **Answer style** (observed, never asked) | Answer time, changed answers | Impulsivity (concept doc); "doubts about actions" (Frost perfectionism scale) | Starting values for the in-game choice timer and undo window |
-| **I** | **Honesty** | Self-reported | Careless-response and social-desirability checks (Meade & Craig, 2012; Marlowe & Crowne, 1960) | Confidence in the profile; a story beat (§5) |
+| **I** | **Honesty** | Yes / No | Careless-response and social-desirability checks (Meade & Craig, 2012; Marlowe & Crowne, 1960) | Confidence in the profile; a story beat (§5) |
 
 ---
 
@@ -74,7 +74,7 @@ All wording is original. Answers are shown **without** their hidden meaning; the
 | **Q10** | *Which line in a movie would stay with you?* | "Look how well you turned out." → **Family** · "I'm always myself around you." → **Close** · "We could really use someone like you." → **Society**, Achievement · "Wait, everyone needs to see this." → **Social Media**, Appearance · "You seem at peace." → **Self** | Projective sentence · **A, B** |
 | **Q11** | *A paper doll is left out in the rain. What is it most afraid of?* | Not being pretty enough to keep → **not good enough** · Nobody wanting to play with it → **unlovable** · Taking up space in the box → **a burden** · Being forgotten under the bed → **invisible** · Someone noticing it's only paper → **a fake** | Projective downward arrow · **F**. *Ties into the customization theme* |
 | **Q12** | *If you took a selfie right now, how many stars would you give it?* | 0–10 slider | Scaling question · **G** |
-| **Q13** | *One last thing. How honestly did you answer?* | Completely; that was me → 1.0 · Mostly → 0.9 · Some answers were who I'd *like* to be → 0.75 · I picked what sounded best → 0.6 · I don't know anymore → 0.8 | Honesty check · **I** (see §5) |
+| **Q13** | *One last thing. Did you answer honestly?* | **Yes** · **No** | Honesty check · **I** (see §5) |
 
 **Length:** 13 screens, about 3–4 minutes (within PRD P0 #1's ≤ 5 min).
 
@@ -86,20 +86,18 @@ All wording is original. Answers are shown **without** their hidden meaning; the
 
 ## 5. The honesty question (Q13)
 
-**Why ask it:** online surveys use a "did you answer honestly?" item to catch careless or performed answers (Meade & Craig, 2012). On its own it's a weak check, since most people say "yes", so Penrose uses it alongside answer timing (H).
+**Why ask it:** online surveys use a "did you answer honestly?" item to catch careless or performed answers (Meade & Craig, 2012). On its own it's a weak check, since most people say "yes", so Penrose uses it alongside answer timing (H). A simple **Yes / No** is enough: the point is the moment of being asked, not a precise measurement.
 
 **What it does in the game:**
 
 | Answer | Effect on scoring | Story effect |
 | --- | --- | --- |
-| Completely / Mostly | Profile used as is | None |
-| "Some answers were who I'd like to be" | Profile weights softened 25% toward even | Starting Authenticity −1. The mask started before the house did |
-| "I picked what sounded best" | Profile weights softened 40%; Social Media +1 (performing for an audience) | Starting Authenticity −2. Seeking approval even from a quiz |
-| "I don't know anymore" | Softened 20% | Unlocks a Reflection line in Loop 3: *"You said you didn't know. Do you know now?"* |
+| **Yes** | Profile used as is | The Reflection can quote it back in Loop 3: *"You said you were honest. Were you?"* |
+| **No** | Profile weights softened 30% toward even; starting Authenticity −1 | The mask started before the house did. The Reflection in Loop 3: *"You lied on the first page. Who were you answering for?"* |
 
 **Answer-timing check:** if most answers took under about 1 second, profile weights are also softened (likely random clicking).
 
-**At the ending**, the summary quotes the player's own Q13 answer back to them. Penrose asks the question every approval-seeker faces: *were you answering as yourself, or as who you thought you should be?*
+**At the ending**, the summary shows the player's Yes or No next to what their choices actually revealed. Penrose asks the question every approval-seeker faces: *were you answering as yourself, or as who you thought you should be?*
 
 ---
 
@@ -107,7 +105,7 @@ All wording is original. Answers are shown **without** their hidden meaning; the
 
 ### 6.1 Approval profile → room loudness
 
-- Add up each source's points, apply the Q13 softening, and normalize to percentages that sum to 100%. Example: **Family 35% · Society 25% · Social Media 20% · Close 15% · Self 5%**.
+- Add up each source's points, soften them if Q13 is **No** (§5), and normalize to percentages that sum to 100%. Example: **Family 35% · Society 25% · Social Media 20% · Close 15% · Self 5%**.
 - **Room loudness** follows the four outside sources (Family, Close, Society, Social Media). Louder means more frequent, more intense and more personal demands.
 - **Self** raises starting **Authenticity** and doesn't make any room louder.
 - **Ties:** if the top two outside sources are within 10 points, both rooms are "loud".
@@ -127,7 +125,7 @@ All wording is original. Answers are shown **without** their hidden meaning; the
 | Hidden stat | Starting value comes from |
 | --- | --- |
 | **Self-Perception** | Q12, lowered by high self-checking and comparison (Q6, Q8) |
-| **Authenticity** | Self score + self-compassion (Q5) − honesty adjustment (Q13) |
+| **Authenticity** | Self score + self-compassion (Q5); −1 if Q13 is No |
 | **Exhaustion** | 0 for everyone |
 
 ### 6.4 What carries forward
@@ -137,7 +135,7 @@ All wording is original. Answers are shown **without** their hidden meaning; the
 | Appearance ideal (Q4) | First upgrade path offered, for either protagonist |
 | Core belief (Q11) | The Reflection's lines in Loops 3–4 |
 | Baseline (Q12) | Asked again in the Bathroom mirror each loop and at the ending |
-| Honesty (Q13) | Quoted back in the ending summary |
+| Honesty (Q13) | Quoted back by the Reflection in Loop 3, and shown in the ending summary |
 | Approval profile | Ending summary: "whose approval you were chasing" |
 
 ---
