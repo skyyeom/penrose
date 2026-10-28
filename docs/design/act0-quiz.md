@@ -1,191 +1,160 @@
 # Act 0 Quiz: Psychological Design
 
-> **Part of:** GDD (#4) · **Implements:** PRD P0 #1 (Act 0 personality quiz) and #2 (quiz-weighted rooms) · **Status:** Draft v2 for discussion · **Last updated:** 27 Oct 2026
+> **Part of:** GDD (#4) · **Implements:** PRD P0 #1 (Act 0 personality quiz) and #2 (quiz-weighted rooms) · **Status:** v3, final question set chosen by the owner · **Last updated:** 28 Oct 2026
 >
-> **Question this doc answers:** what should the opening quiz ask so that it quietly finds out **whose approval matters most** to the player, **what they value**, and **how they react to criticism**, while feeling like a random, harmless personality quiz? It must work for male and female players alike.
->
-> **v2.2:** replaced the movie-line, paper-doll and selfie questions with less obvious ones (old key, lost sock, inner weather).
->
-> **v2.1:** removed the spilled-water question; criticism style is now measured in play (§6.2).
->
-> **v2 changes:** questions are now indirect (no mention of parents, friends, work or followers); rooms updated to Family, Friends & Partner, Society, Social Media + Bathroom; added a final yes/no honesty question.
+> **Question this doc answers:** how does the opening quiz quietly find out **whose approval matters most** to the player, while feeling like a random, harmless personality quiz, for male and female players alike?
 
 ---
 
 ## 1. The rooms are a psychology model
 
-Body-image research's leading framework, the **Tripartite Influence Model** (Thompson et al., 1999), says appearance pressure comes mainly from **family, peers and media**. Its standard questionnaire, the **SATAQ-4R** (Schaefer et al., 2017), adds **significant others** (romantic partners). Penrose adds two pressures that are especially strong in Korea: **extended family** and **the workplace**.
+Body-image research's leading framework, the **Tripartite Influence Model** (Thompson et al., 1999), says appearance pressure comes mainly from **family, peers and media**. Its standard questionnaire, the **SATAQ-4R** (Schaefer et al., 2017), adds **significant others**. Penrose adds two pressures that are especially strong in Korea: **extended family** and **the workplace**.
 
-| Approval source (what the quiz measures) | Who it covers | Room | Research and real-world basis |
+| Approval source | Who it covers | Room | Research and real-world basis |
 | --- | --- | --- | --- |
-| **Family** | Parents, siblings, **extended family** (aunts, uncles, grandparents at holidays) | **Family Room** | Tripartite model and SATAQ-4R "family" pressure. Korea: in a Sep 2026 survey of 1,000 adults (PMI), "excessive interference and personal questions from relatives" was the #1 holiday custom people want changed (48.5%); being compared with siblings was the most common holiday topic (27.9%). In another survey, appearance and weight comments were among the most-hated holiday nagging (13%) |
-| **Close** | Friends **and a significant other** | **Friends & Partner Room** | Tripartite "peers" + SATAQ-4R "significant others". The two overlap in real life (friends judge your partner; partners compare you to friends) |
-| **Society** | **Coworkers**, bosses, interviewers, teachers, people who judge you "professionally" | **Society Room** | Lookism in hiring: in 2017, most Korean private employers still required resume photos, and Korea banned photos in public-sector hiring ("blind hiring") because of appearance discrimination. Works for a graduation-age protagonist: first jobs, part-time jobs, interviews |
+| **Family** | Parents, siblings, extended family | **Family Room** | Tripartite "family" pressure. Korea: in a Sep 2026 survey of 1,000 adults (PMI), "excessive interference and personal questions from relatives" was the #1 holiday custom people want changed (48.5%), and being compared with siblings was the most common holiday topic (27.9%) |
+| **Close** | Friends and a significant other | **Friends & Partner Room** | Tripartite "peers" + SATAQ-4R "significant others" |
+| **Society** | Coworkers, bosses, interviewers | **Society Room** | Lookism in hiring: in 2017 most Korean private employers still required resume photos, and Korea banned them in public-sector hiring ("blind hiring") |
 | **Social Media** | Followers, strangers, the algorithm | **Social Media Room** | Tripartite "media" pressure; the strongest predictor of body dissatisfaction for both men and women in a study of Korean undergraduates (*IJERPH*, 2020) |
-| **Self** | The protagonist's own standards | **Bathroom** | Not a source of outside pressure. A high Self score is *protective* (more starting Authenticity). The Bathroom is where the protagonist checks their appearance and status in the mirror between rooms; it's where internalized standards ("those standards are *mine* now") show up |
-
-**Bathroom as the self-check hub.** Between rooms, the protagonist can stop in the Bathroom to check their appearance and their "status" (how each room currently sees them). It's diegetic UI: the mirror *is* the stats screen. Over the loops the mirror stops showing what the player wants to see.
+| *(Self)* | The protagonist's own standards | **Bathroom** | Not measured by the quiz. The Bathroom is where the protagonist checks their appearance and status in the mirror between rooms (§5) |
 
 ---
 
-## 2. Why indirect questions
+## 2. Why the questions look random
 
-Asking directly ("Whose approval matters to you?") gets the answer people *want* to give. This is **social desirability bias**. Psychology has two well-tested ways around it:
+Asking directly ("Whose approval matters to you?") gets the answer people *want* to give: **social desirability bias**. Indirect questions about objects, sounds and scenes get closer to the truth. Fisher (1993) found that indirect questioning **reduced social desirability bias** on sensitive topics.
 
-- **Indirect (projective) questions.** People reveal more when they answer about a character, an object or a scenario instead of about themselves. Fisher (1993) found indirect questioning **reduced social desirability bias** on sensitive topics and changed nothing on neutral ones. Projective methods like sentence completion and "pick a picture" are long-standing tools in psychological assessment.
-- **Many small items instead of one big one.** Each answer is only a weak signal, but adding up several questions gives a reliable picture. This is how every validated questionnaire works.
+Each answer is a **symbol** for what an approval source offers:
 
-**Design rules for every question**
-1. Never mention parents, relatives, friends, partners, work, school, followers or social media.
-2. Every question must look like it's about taste, imagination or a small everyday moment.
-3. Each answer is a **symbol** for one approval source (e.g. a windowsill in a grandparent's house = Family).
-4. Every approval source is scored by **at least four questions**.
-5. Gender-neutral wording; no question about eating, weight or body numbers.
-
----
-
-## 3. What the quiz measures
-
-| # | Construct | Values | Research basis | Drives |
-| --- | --- | --- | --- | --- |
-| **A** | **Whose approval matters** | Family · Close · Society · Social Media · Self | SATAQ-4R pressure sources; Contingencies of Self-Worth (Crocker et al., 2003) | **Room loudness** |
-| **B** | **What you value** | Relationships · Achievement/Status · Appearance · Recognition · Independence | Contingencies of Self-Worth; Schwartz's values | What each room *promises* in exchange for an upgrade |
-| **C** | **How you react to criticism** | Internalize · Comply · Defend · Avoid · Self-compassion | Self-Compassion Scale (Neff, 2003); Fear of Negative Evaluation (Leary, 1983); body-dysmorphia safety behaviors (Wilhelm, Phillips & Steketee, 2013) | **How NPCs pressure you** (§6.2). **Measured in play, not in the quiz** (§6.2) |
-| **D** | **Which appearance ideal you've absorbed** | Leaner · Stronger · Flawless skin · Sharper features · Taller · Not appearance-focused | SATAQ-4R internalization; Drive for Muscularity Scale (McCreary & Sasse, 2000) | **First upgrade path** |
-| **E** | **Self-checking and comparison** | Low → high | Physical Appearance Comparison Scale-R (Schaefer & Thompson, 2014); body surveillance (McKinley & Hyde, 1996) | Starting Self-Perception; how often the Bathroom "calls" you |
-| **F** | **Core belief** | not good enough · unlovable · a burden · invisible · a fake | CBT downward arrow (Beck; Burns), asked indirectly through a projective story; Young schemas (defectiveness, approval-seeking, social isolation) | What **the Reflection** says in Loops 3–4 |
-| **G** | **Baseline mood / self-image** | 0–10 | Scaling question as a "weather report" mood check-in; true self-image rating taken at the first Bathroom mirror | Starting Self-Perception; asked again at the ending |
-| **H** | **Answer style** (observed, never asked) | Answer time, changed answers | Impulsivity (concept doc); "doubts about actions" (Frost perfectionism scale) | Starting values for the in-game choice timer and undo window |
-| **I** | **Honesty** | Yes / No | Careless-response and social-desirability checks (Meade & Craig, 2012; Marlowe & Crowne, 1960) | Confidence in the profile; a story beat (§5) |
+| Source | What it offers | Symbols used |
+| --- | --- | --- |
+| **Family** | Care, history, being looked after | Sunny windowsill · someone cooking breakfast · photo albums · a long table raising a glass |
+| **Close** | Being known by a few | Living-room coffee table · a voice message · handwritten notes · an inside joke |
+| **Society** | Performance, position, being on time | Office lobby · your alarm · your first name badge · a city skyline |
+| **Social Media** | Being seen, being counted | A café · notifications · all your old phones · a trophy |
 
 ---
 
-## 4. The questions
+## 3. The questions
 
-All wording is original. Answers are shown **without** their hidden meaning; the arrows below are only for us. Display order of answers is shuffled.
+Answers are shown **without** their hidden meaning, and **in shuffled order**, so the room order never repeats across questions.
 
-| # | Question (player sees) | Answers → hidden scoring | Technique · Construct |
+| # | Question (player sees) | Answers → hidden scoring | Measures |
 | --- | --- | --- | --- |
-| **Q1** | *If you were a houseplant, where would you want to live?* | On a sunny windowsill in an old house where someone waters you every morning → **Family** · On the desk of someone who talks to you while they draw → **Close** · In the lobby of a tall glass building → **Society** · In a café that everyone photographs → **Social Media** · In a wild garden, growing however you like → **Self** | Projective symbol · **A** |
-| **Q2** | *Which sound would you most like to wake up to?* | Someone cooking in the next room → **Family** · A voice message from someone who misses you → **Close** · Your alarm, exactly on time, nothing missed → **Society**, Achievement · A phone buzzing with notifications → **Social Media** · Rain, and nowhere you have to be → **Self** | Projective symbol · **A, B** |
-| **Q3** | *You find a dusty box in an attic. What do you hope is inside?* | Old report cards someone kept all these years → **Family** · Notes folded into tiny squares → **Close** · Your first name badge → **Society** · An old phone full of photos → **Social Media** · A diary with a little lock → **Self** | Projective symbol · **A** |
-| **Q4** | *Which animal would you be for a day?* | A deer → leaner · A tiger → stronger · A swan → flawless skin · A fox → sharper features · A giraffe → taller · A sloth → not appearance-focused | Projective symbol · **D**. *The fox quietly foreshadows the Gumiho* |
-| **Q5** | *You're alone in an elevator with mirrored walls. Where do your eyes go?* | Your reflection → high self-checking · The other reflections in the reflection → high comparison · Your phone → **Social Media**, low checking · The floor numbers → low · The floor → avoidance | Everyday scenario · **E** |
-| **Q6** | *Ten years from now, you mail yourself a postcard. What's on the front?* | A long table, everyone raising a glass → **Family**, Relationships · An inside joke only a few people get → **Close**, Relationships · A city skyline seen from the top floor → **Society**, Achievement/Status · A crowd, and you on a stage → **Social Media**, Recognition · A small quiet place you chose yourself → **Self**, Independence | Miracle question, made indirect · **A, B** |
-| **Q7** | *At a buffet, you…* | Glance at what everyone else picked first → high comparison · Take a photo before the first bite → **Social Media** · Let whoever you came with choose for you → **Close** · Do a full lap to find the very best option → perfectionism · Go straight for what you love → **Self**, low comparison | Everyday scenario · **A, E** |
-| **Q8** | *In a story, the main character comes home after many years away. Who do they hope is waiting?* | An old woman on the porch → **Family** · Someone at the station with two coffees → **Close** · Someone who once said they'd never make it → **Society** · Half the town, phones out → **Social Media** · Nobody; they want to walk the streets alone first → **Self** | Projective story (about a character, not you) · **A** |
-| **Q9** | *You're handed an old key. What do you think it opens?* | A front door with slippers lined up just inside → **Family**, Relationships · A car where the passenger seat is already set just for you → **Close**, Relationships · A door marked "Authorized Personnel Only" → **Society**, Achievement/Status · A glass display case in the middle of a busy museum → **Social Media**, Appearance/Recognition · A cabin nobody else knows about → **Self**, Independence | Projective symbol · **A, B** |
-| **Q10** | *You find a single sock in the dryer. What happened to the other one?* | It had a hole, so it got thrown out → **not good enough** · It ran off and never came back → **unlovable** · It left so the drawer would have more room → **a burden** · It's been gone for months; nobody noticed → **invisible** · There never was another one; it only looked like a pair → **a fake** | Projective story (downward arrow, made indirect) · **F** |
-| **Q11** | *What's the weather like inside your head today?* | Slider from ⛈ storm (0) to ☀ clear sky (10) | "Feelings weather report" mood check-in (scaling question) · **G** |
-| **Q12** | *One last thing. Did you answer honestly?* | **Yes** · **No** | Honesty check · **I** (see §5) |
+| **Q1** | *If you were a houseplant, where would you want to be placed?* | A. On a sunny windowsill → **Family** · B. On the living room coffee table → **Close** · C. In the lobby of an office building → **Society** · D. In a café → **Social Media** | Approval source |
+| **Q2** | *Which sound would you most like to wake up to?* | A. Someone cooking breakfast → **Family** · B. A voice message → **Close** · C. Your alarm → **Society** · D. Instagram notifications → **Social Media** | Approval source |
+| **Q3** | *You find a dusty box in an attic. What do you hope is inside?* | A. Photo albums → **Family** · B. Handwritten notes → **Close** · C. Your first name badge → **Society** · D. All your old phones → **Social Media** | Approval source |
+| **Q4** | *Which animal would you want to be for a day?* | A. Deer → **leaner** · B. Tiger → **stronger** · C. Swan → **flawless skin** · D. Fox → **sharper features** | Appearance ideal → first upgrade path. *The fox quietly foreshadows the Gumiho* |
+| **Q5** | *You're sending a postcard to your future self. What's on the front?* | A. A long table with everyone raising a glass → **Family** · B. An inside joke → **Close** · C. A city skyline → **Society** · D. A trophy → **Social Media** | Approval source |
+| **Q6** | *Did you answer all the questions truthfully?* | A. Yes · B. No | Honesty check (§4.3) |
 
-**Length:** 12 screens, about 3 minutes (within PRD P0 #1's ≤ 5 min).
+**Length:** 6 screens, about 1–2 minutes.
 
-**Coverage check (approval sources):** Family Q1, Q2, Q3, Q6, Q8, Q9 (6) · Close Q1, Q2, Q3, Q6, Q7, Q8, Q9 (7) · Society Q1, Q2, Q3, Q6, Q8, Q9 (6) · Social Media Q1, Q2, Q3, Q5, Q6, Q7, Q8, Q9 (8) · Self Q1, Q2, Q3, Q6, Q7, Q8, Q9 (7).
-
-**Why the symbols are believable:** they follow what each source *offers*. Family = care, history, being kept (windowsill, report cards, the porch, slippers at the door). Close = being known by a few (notes, inside jokes, two coffees, a seat set for you). Society = performance and position (glass lobby, name badge, top floor, staff-only door). Social Media = being seen by many (photographed café, notifications, crowd, display case). Self = choosing for yourself (wild garden, diary, a place you chose, a hidden cabin).
-
-**Core belief (Q10):** the lost sock's "story" is a projection of the downward-arrow question *"…and what would that mean about you?"* Each ending mirrors one belief: discarded for a flaw (not good enough), abandoned (unlovable), leaving to make room for others (a burden), unnoticed (invisible), never real (a fake).
-
-**Baseline (Q11):** the weather slider is a mood check-in, a stand-in for self-image. The true self-image baseline is taken at the **first Bathroom mirror visit** in Loop 1, where rating yourself is natural (§6.3).
+**Also recorded, never shown:** how long each answer took. It feeds the in-game choice timer and the tie-break rule (§4.2).
 
 ---
 
-## 5. The honesty question (Q12)
+## 4. Scoring
 
-**Why ask it:** online surveys use a "did you answer honestly?" item to catch careless or performed answers (Meade & Craig, 2012). On its own it's a weak check, since most people say "yes", so Penrose uses it alongside answer timing (H). A simple **Yes / No** is enough: the point is the moment of being asked, not a precise measurement.
+### 4.1 Approval profile → room loudness
 
-**What it does in the game:**
+Each of Q1, Q2, Q3 and Q5 gives **1 point** to one source (4 points total). Example:
+
+| Answers | Family | Close | Society | Social Media |
+| --- | --- | --- | --- | --- |
+| Windowsill · Cooking · Name badge · Long table | **3** | 0 | 1 | 0 |
+| Loudness | **Loudest** | Quiet | Medium | Quiet |
+
+- **Loudest room** = the most points. Louder means more frequent, more intense and more personal demands from that room.
+- A room with 0 points still pressures the player, just less.
+
+### 4.2 Ties
+
+With only four scored questions, ties will be common (e.g. 2–2, or 1–1–1–1).
+- **Two-way tie (2–2):** both rooms are loud.
+- **Tie-break when needed:** the source picked **fastest** wins. Quick answers reflect more automatic preferences.
+- **All different (1–1–1–1):** no room starts loud. In Loop 1 the room where the player spends the most time becomes the loudest from Loop 2.
+
+### 4.3 Honesty question (Q6)
 
 | Answer | Effect on scoring | Story effect |
 | --- | --- | --- |
-| **Yes** | Profile used as is | The Reflection can quote it back in Loop 3: *"You said you were honest. Were you?"* |
-| **No** | Profile weights softened 30% toward even; starting Authenticity −1 | The mask started before the house did. The Reflection in Loop 3: *"You lied on the first page. Who were you answering for?"* |
+| **Yes** | Profile used as is | Loop 3, the Reflection: *"You said you were honest. Were you?"* |
+| **No** | The loudest room is decided in Loop 1 by where the player spends the most time (as for 1–1–1–1); starting Authenticity −1 | Loop 3, the Reflection: *"You lied on the first page. Who were you answering for?"* |
 
-**Answer-timing check:** if most answers took under about 1 second, profile weights are also softened (likely random clicking).
+Online surveys use a "did you answer honestly?" item to catch careless or performed answers (Meade & Craig, 2012). On its own it's a weak check, since most people say "yes"; in Penrose its main job is the story moment. **Answer-timing check:** if most answers took under about 1 second (likely random clicking), treat the profile as if Q6 were **No**.
 
-**At the ending**, the summary shows the player's Yes or No next to what their choices actually revealed. Penrose asks the question every approval-seeker faces: *were you answering as yourself, or as who you thought you should be?*
+### 4.4 Starting stats
+
+| Hidden stat | Starting value |
+| --- | --- |
+| **Self-Perception** | Set by the player's own 0–10 rating at the **first Bathroom mirror visit** |
+| **Authenticity** | Same for everyone; −1 if Q6 is No |
+| **Exhaustion** | 0 |
 
 ---
 
-## 6. Scoring
+## 5. Measured in play instead of in the quiz
 
-### 6.1 Approval profile → room loudness
+Keeping the quiz short and disguised means some things are better measured by what the player **does**. Behavior is also more reliable than self-report.
 
-- Add up each source's points, soften them if Q12 is **No** (§5), and normalize to percentages that sum to 100%. Example: **Family 35% · Society 25% · Social Media 20% · Close 15% · Self 5%**.
-- **Room loudness** follows the four outside sources (Family, Close, Society, Social Media). Louder means more frequent, more intense and more personal demands.
-- **Self** raises starting **Authenticity** and doesn't make any room louder.
-- **Ties:** if the top two outside sources are within 10 points, both rooms are "loud".
+| What | How it's measured in play | Drives |
+| --- | --- | --- |
+| **Criticism style** (internalize, comply, defend, avoid, self-compassion) | The response the player picks most often when first criticized in each Loop 1 room | How NPCs pressure the player from Loop 2 (below) |
+| **Self-checking** | How often the player chooses to visit the Bathroom mirror between rooms | Self-Perception drops faster for frequent checkers |
+| **Self-image** | The 0–10 mirror rating, first in Loop 1 and again each loop | Self-Perception; shown at the ending as before/after |
+| **Core belief** (not good enough, unlovable, a burden, invisible, a fake) | What the player chooses when the Reflection first asks *"What are you afraid they'll find out?"* (Loop 2) | What the Reflection says in Loops 3–4 |
+| **Impulsivity, risk, conformity, regret** | Choice timer and the undo window (concept doc) | Endings and stats |
 
-### 6.2 Criticism style → how NPCs pressure you
+**NPC tactics by criticism style** (from Loop 2; Loop 1 uses *Comply* for everyone):
 
-Criticism style is **not asked in the quiz**. A single quiz question would be unreliable, and what players *do* says more than what they say they'd do. Instead, the first criticism the protagonist receives in each Loop 1 room offers five responses (accept it and feel bad, fix it, push back, change the subject or leave, shrug it off kindly). The most frequent response becomes the player's style, and from Loop 2 the NPCs adapt to it. Until then, the rooms use the **Comply** tactic, which suits the "harmless self-improvement" surface of Loop 1. The same responses feed the in-play **self-compassion** measure from the concept doc.
-
-| Player's style | What the NPCs do (all four rooms) |
+| Player's style | What the NPCs do |
 | --- | --- |
-| **Internalize** | Quiet disappointment: "We're not angry. We just expected more." |
-| **Comply** | Small, reasonable requests that keep escalating: "That's good, but what about…" |
-| **Defend** | Guilt: "After everything we've done for you." |
-| **Avoid** | Exclusion: plans made without you, messages left on read |
-| **Self-compassion** | Gaslighting: "You're being stubborn. You *know* we're right." |
-
-### 6.3 Starting stats
-
-| Hidden stat | Starting value comes from |
-| --- | --- |
-| **Self-Perception** | Q11 (mood) at first, replaced by the player's own 0–10 rating at the first Bathroom mirror visit; lowered by high self-checking and comparison (Q5, Q7) |
-| **Authenticity** | Self score; −1 if Q12 is No |
-| **Exhaustion** | 0 for everyone |
-
-### 6.4 What carries forward
-
-| Quiz result | Used later |
-| --- | --- |
-| Appearance ideal (Q4) | First upgrade path offered, for either protagonist |
-| Core belief (Q10) | The Reflection's lines in Loops 3–4 |
-| Baseline (Q11 + first mirror rating) | The mirror rating repeats in the Bathroom each loop and at the ending, so the player sees how it changed |
-| Honesty (Q12) | Quoted back by the Reflection in Loop 3, and shown in the ending summary |
-| Approval profile | Ending summary: "whose approval you were chasing" |
+| Internalize | Quiet disappointment: "We're not angry. We just expected more." |
+| Comply | Small, reasonable requests that keep escalating: "That's good, but what about…" |
+| Defend | Guilt: "After everything we've done for you." |
+| Avoid | Exclusion: plans made without you, messages left on read |
+| Self-compassion | Gaslighting: "You're being stubborn. You *know* we're right." |
 
 ---
 
-## 7. Male and female protagonists
+## 6. Male and female protagonists
 
 The quiz is **identical for everyone**, and the player picks the protagonist **after** the quiz.
 
-- **Ideals differ on average, not by rule.** The SATAQ-4R measures the thin and muscular ideals separately because both men and women report both. In a study of Korean undergraduates, media pressure mattered most for both; for women, family and media predicted the drive for thinness, and for men, peer appearance talk and media predicted the drive for muscularity (*IJERPH*, 2020).
-- **The animal (Q4) picks the first upgrade path for either protagonist.** A female protagonist can chase "stronger"; a male protagonist can chase "leaner".
-- **The rooms need son and daughter variants.** Family: "You'd be so pretty if…" / "Stand up straight, you look short in photos." Society: "Clients like a clean, fresh look." Friends & Partner: comparisons with exes and friends' partners.
-- **Every upgrade path needs a Loop 3 reveal.** The concept doc covers weight loss, skin bleaching and facial surgery. Muscle and height paths need equivalents (e.g. limb-lengthening surgery is real, and so is steroid harm).
+- **The animal (Q4) picks the first upgrade path for either protagonist.** A female protagonist can chase "stronger"; a male protagonist can chase "leaner". The SATAQ-4R measures thin and muscular ideals separately because men and women report both. In a study of Korean undergraduates, media pressure mattered most for both; family and media predicted the drive for thinness in women, and peer appearance talk and media predicted the drive for muscularity in men (*IJERPH*, 2020).
+- **Four upgrade paths, each with a Loop 3 reveal:** leaner (weight loss → cutting away pieces of yourself), flawless skin (brightening → chemical burns and bleaching), sharper features (makeup and editing → surgical mutilation), and stronger (training → a reveal still to design, e.g. steroid damage or tearing muscle).
+- **The rooms need son and daughter variants** (e.g. Family: "You'd be so pretty if…" / "Stand up straight, you look short in photos").
 
 ---
 
-## 8. Ethics and safety rules
+## 7. What the ending reveals
 
-1. **It's not a diagnosis.** Inspired by validated instruments but not one; Penrose never tells players they have a disorder.
-2. **No questions about eating, weight or body numbers.**
-3. **No clinical screening items**, even reworded.
-4. **Debrief at the end.** Psychology research that uses deception must debrief participants afterward (APA Ethics Code, Standard 8.07). The ending summary explains what each question really measured and links to support resources (PRD P0 #9).
-5. **Quiz data stays on the device** unless the player opts in to anonymous telemetry.
-6. **Original wording only**; nothing copied from copyrighted questionnaires.
+The ending summary acts as a **debrief**, as psychology research does after a deception (APA Ethics Code, Standard 8.07). It explains:
+- what each answer meant (e.g. "You chose the sunny windowsill: you wanted to be looked after"),
+- which room was loudest because of it,
+- the player's Q6 answer next to what their choices revealed,
+- their first and last mirror ratings,
+- links to support resources (PRD P0 #9).
+
+All quiz data stays on the player's device unless they opt in to anonymous telemetry.
 
 ---
 
-## 9. Open decisions
+## 8. Things to double-check
 
-| # | Decision | Recommendation |
-| --- | --- | --- |
-| D1 | How detailed is the ending reveal? | A few plain-language lines, with a "see details" button for the full breakdown |
-| D2 | Does the Bathroom mirror repeat the 0–10 question each loop? | **Yes**, framed as the protagonist rating themselves in the mirror |
-| D3 | Can players retake the quiz on replay? | **Yes**. A different loud room is a reason to replay |
-| D4 | Show the answer options as pictures instead of text? | **Yes, where possible** (hand-drawn icons). Pictures are faster and feel even more random |
+| # | Item | Why it matters | Suggestion |
+| --- | --- | --- | --- |
+| C1 | Q2 "Instagram notifications" | Names social media directly (the one obvious answer in the quiz) and uses a real brand name | "Phone notifications" or "Your phone buzzing nonstop" |
+| C2 | Q5 "A trophy" → Social Media | A trophy usually reads as achievement (Society). Players who value achievement may pick it and get the wrong room | Something about being seen: "A crowd cheering your name" or "A magazine cover" |
+| C3 | Only 4 scored questions | Ties will be frequent | Covered by §4.2; playtest how often ties happen |
 
-## 10. How we'll check it works (feeds #15)
+## 9. How we'll check it works (feeds #15)
 
 - **The disguise holds:** ≤ 20% of first-time playtesters guess what the quiz measures before the ending.
-- **The symbols carry the right meaning:** after playing, testers rank the five sources directly ("whose opinion matters most to you?"). Their quiz profile should match the top source for most testers. If a question's answers don't line up, rewrite that question.
-- **Different profiles feel different:** testers with opposite profiles name different "loudest" rooms.
-- **The reveal feels fair, not creepy:** ≥ 70% say the ending summary felt accurate; ≤ 15% say it felt invasive.
+- **The symbols carry the right meaning:** after playing, testers rank the four sources directly ("whose opinion matters most to you?"). Their quiz result should match their top source for most testers. Rewrite any question whose answers don't line up.
+- **Different results feel different:** testers with different loudest rooms describe the game differently.
+- **The reveal feels fair:** ≥ 70% say the ending summary felt accurate; ≤ 15% say it felt invasive.
 
 ---
 
@@ -195,18 +164,7 @@ The quiz is **identical for everyone**, and the player picks the protagonist **a
 - Schaefer, L. M., et al. (2017). Development and validation of the SATAQ-4R. *International Journal of Eating Disorders*, 50(2). [PubMed](https://pubmed.ncbi.nlm.nih.gov/27539814/)
 - Fisher, R. J. (1993). Social desirability bias and the validity of indirect questioning. *Journal of Consumer Research*, 20(2), 303–315. [doi:10.1086/209351](https://doi.org/10.1086/209351)
 - Meade, A. W., & Craig, S. B. (2012). Identifying careless responses in survey data. *Psychological Methods*, 17(3), 437–455. [doi:10.1037/a0028085](https://doi.org/10.1037/a0028085)
-- Crowne, D. P., & Marlowe, D. (1960). A new scale of social desirability independent of psychopathology. *Journal of Consulting Psychology*, 24(4).
-- Crocker, J., et al. (2003). Contingencies of self-worth in college students. *JPSP*, 85(5). [Crocker Lab](https://www.asc.ohio-state.edu/psychology/crockerlab/csw.php)
-- Neff, K. D. (2003). The development and validation of a scale to measure self-compassion. *Self and Identity*, 2(3).
-- Leary, M. R. (1983). A brief version of the Fear of Negative Evaluation Scale. *PSPB*, 9(3).
-- Schaefer, L. M., & Thompson, J. K. (2014). The Physical Appearance Comparison Scale-Revised. *Eating Behaviors*, 15(2).
-- McKinley, N. M., & Hyde, J. S. (1996). The Objectified Body Consciousness Scale. *Psychology of Women Quarterly*, 20(2).
-- McCreary, D. R., & Sasse, D. K. (2000). An exploration of the drive for muscularity in adolescent boys and girls. *Journal of American College Health*, 48(6).
-- Wilhelm, S., Phillips, K. A., & Steketee, G. (2013). *Cognitive-Behavioral Therapy for Body Dysmorphic Disorder.* Guilford.
-- Frost, R. O., et al. (1990). The dimensions of perfectionism. *Cognitive Therapy and Research*, 14.
-- Burns, D. D. (1980). *Feeling Good.* (Downward arrow technique.) · de Shazer, S. (1988). *Clues.* (Miracle and scaling questions.)
-- Young, J. E., Klosko, J. S., & Weishaar, M. E. (2003). *Schema Therapy.* Guilford.
 - Sociocultural influences, drive for thinness, drive for muscularity, and body dissatisfaction among Korean undergraduates (2020). *IJERPH*, 17(14), 5260. [MDPI](https://www.mdpi.com/1660-4601/17/14/5260)
-- Yonhap News TV (23 Sep 2026). Chuseok surveys by Gayeon (300 unmarried adults) and PMI (1,000 adults aged 20–68). [Link](https://www.yonhapnewstv.co.kr/news/AKR20260923144828D5J)
-- The Korea Times (5 Jul 2017). Korea begins blind hiring for all public jobs. [Link](https://www.koreatimes.co.kr/southkorea/society/20170705/korea-begins-blind-hiring-for-all-public-jobs) · The World (17 Jul 2019). South Korea's new blind hiring law. [Link](https://theworld.org/stories/2019/07/17/south-koreas-new-blind-hiring-law-bans-personal-interview-questions)
+- Yonhap News TV (23 Sep 2026). Chuseok surveys by Gayeon and PMI. [Link](https://www.yonhapnewstv.co.kr/news/AKR20260923144828D5J)
+- The Korea Times (5 Jul 2017). Korea begins blind hiring for all public jobs. [Link](https://www.koreatimes.co.kr/southkorea/society/20170705/korea-begins-blind-hiring-for-all-public-jobs)
 - American Psychological Association. *Ethical Principles of Psychologists and Code of Conduct*, Standard 8.07.
