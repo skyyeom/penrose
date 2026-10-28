@@ -30,10 +30,10 @@ Each answer is a **symbol** for what an approval source offers:
 
 | Source | What it offers | Symbols used |
 | --- | --- | --- |
-| **Family** | Care, history, being looked after | Sunny windowsill · someone cooking breakfast · photo albums · the hallway of an old house · a long table raising a glass |
-| **Close** | Being known by a few | Living-room coffee table · a voice message · handwritten notes · above someone's bed · an inside joke |
-| **Society** | Performance, position, being on time | Office lobby · your alarm · your first name badge · a company boardroom · a city skyline |
-| **Social Media** | Being seen by many | A café · phone notifications · all your old phones · a gallery with a line out the door · a magazine cover |
+| **Family** | Care, history, being looked after | Sunny windowsill · someone cooking breakfast · photo albums · the hallway · a long table raising a glass |
+| **Close** | Being known by a few | Living-room coffee table · a voice message · handwritten notes · above the bed · an inside joke |
+| **Society** | Performance, position, being on time | Office lobby · your alarm · your first name badge · a boardroom · a city skyline |
+| **Social Media** | Being seen by many | A café · phone notifications · all your old phones · a gallery · a magazine cover |
 
 ---
 
@@ -46,7 +46,7 @@ Answers are shown **without** their hidden meaning, and **in shuffled order**, s
 | **Q1** | *If you were a houseplant, where would you want to be placed?* | A. On a sunny windowsill → **Family** · B. On the living room coffee table → **Close** · C. In the lobby of an office building → **Society** · D. In a café → **Social Media** | Need to belong; Self-Determination Theory (relatedness) |
 | **Q2** | *Which sound would you most like to wake up to?* | A. Someone cooking breakfast → **Family** · B. A voice message → **Close** · C. Your alarm → **Society** · D. Phone notifications → **Social Media** | Social reward; attachment |
 | **Q3** | *You find a dusty box in an attic. What do you hope is inside?* | A. Photo albums → **Family** · B. Handwritten notes → **Close** · C. Your first name badge → **Society** · D. All your old phones → **Social Media** | The extended self; autobiographical memory |
-| **Q4** | *If you were a painting, where would you want to hang?* | A. In the hallway of an old house → **Family** · B. Above someone's bed → **Close** · C. In a company boardroom → **Society** · D. In a gallery with a line out the door → **Social Media** | The looking-glass self; reflected appraisals |
+| **Q4** | *If you were a painting, where would you want to hang?* | A. In the hallway → **Family** · B. Above the bed → **Close** · C. In a boardroom → **Society** · D. In a gallery → **Social Media** | The looking-glass self; reflected appraisals |
 | **Q5** | *You're sending a postcard to your future self. What's on the front?* | A. A long table with everyone raising a glass → **Family** · B. An inside joke → **Close** · C. A city skyline → **Society** · D. A magazine cover → **Social Media** | Possible selves; the miracle question |
 | **Q6** | *Did you answer all the questions truthfully?* | A. Yes · B. No | Careless-response and social-desirability checks |
 
@@ -76,7 +76,7 @@ Each of Q1–Q5 gives **1 point** to one source (5 points total). Example:
 
 | Answers | Family | Close | Society | Social Media |
 | --- | --- | --- | --- | --- |
-| Windowsill · Cooking · Name badge · Old house · Long table | **4** | 0 | 1 | 0 |
+| Windowsill · Cooking · Name badge · Hallway · Long table | **4** | 0 | 1 | 0 |
 | Loudness | **Loudest** | Quiet | Medium | Quiet |
 
 - **Loudest room** = the most points. Louder means more frequent, more intense and more personal demands from that room.
