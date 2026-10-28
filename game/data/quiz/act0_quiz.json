@@ -1,0 +1,69 @@
+{
+	"_doc": "Act 0 quiz content. Design and research: docs/design/act0-quiz.md. Answers are shuffled at runtime; 'source' is hidden from the player.",
+	"questions": [
+		{
+			"id": "q1_houseplant",
+			"type": "scored",
+			"text": "If you were a houseplant, where would you want to be placed?",
+			"answers": [
+				{ "text": "On a sunny windowsill", "source": "family" },
+				{ "text": "On the living room coffee table", "source": "close" },
+				{ "text": "In the lobby of an office building", "source": "society" },
+				{ "text": "In a café", "source": "social_media" }
+			]
+		},
+		{
+			"id": "q2_wake_up_sound",
+			"type": "scored",
+			"text": "Which sound would you most like to wake up to?",
+			"answers": [
+				{ "text": "Someone cooking breakfast", "source": "family" },
+				{ "text": "A voice message", "source": "close" },
+				{ "text": "Your alarm", "source": "society" },
+				{ "text": "Phone notifications", "source": "social_media" }
+			]
+		},
+		{
+			"id": "q3_attic_box",
+			"type": "scored",
+			"text": "You find a dusty box in an attic. What do you hope is inside?",
+			"answers": [
+				{ "text": "Photo albums", "source": "family" },
+				{ "text": "Handwritten notes", "source": "close" },
+				{ "text": "Your first name badge", "source": "society" },
+				{ "text": "All your old phones", "source": "social_media" }
+			]
+		},
+		{
+			"id": "q4_painting",
+			"type": "scored",
+			"text": "If you were a painting, where would you want to hang?",
+			"answers": [
+				{ "text": "In the hallway", "source": "family" },
+				{ "text": "Above the bed", "source": "close" },
+				{ "text": "In a boardroom", "source": "society" },
+				{ "text": "In a gallery", "source": "social_media" }
+			]
+		},
+		{
+			"id": "q5_postcard",
+			"type": "scored",
+			"text": "You're sending a postcard to your future self. What's on the front?",
+			"answers": [
+				{ "text": "A long table with everyone raising a glass", "source": "family" },
+				{ "text": "An inside joke", "source": "close" },
+				{ "text": "A city skyline", "source": "society" },
+				{ "text": "A magazine cover", "source": "social_media" }
+			]
+		},
+		{
+			"id": "q6_honesty",
+			"type": "honesty",
+			"text": "Did you answer all the questions truthfully?",
+			"answers": [
+				{ "text": "Yes", "honest": true },
+				{ "text": "No", "honest": false }
+			]
+		}
+	]
+}
