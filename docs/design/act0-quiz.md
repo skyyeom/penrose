@@ -1,6 +1,6 @@
 # Act 0 Quiz: Psychological Design
 
-> **Part of:** GDD (#4) · **Implements:** PRD P0 #1 (Act 0 personality quiz) and #2 (quiz-weighted rooms) · **Status:** v4, owner's question set · **Last updated:** 28 Oct 2026
+> **Part of:** [GDD](../04-gdd.md) (#4) · **Implements:** PRD P0 #1 (Act 0 personality quiz) and #2 (quiz-weighted rooms) · **Status:** v4, owner's question set · **Last updated:** 28 Oct 2026
 >
 > **Question this doc answers:** how does the opening quiz quietly find out **whose approval matters most** to the player, while feeling like a random, harmless personality quiz, for male and female players alike?
 >
