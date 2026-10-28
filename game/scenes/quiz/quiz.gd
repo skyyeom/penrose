@@ -21,7 +21,6 @@ var _question_started_at: float = 0.0
 var _scored_answers: Array = []
 var _honest: bool = true
 
-var _progress_label: Label
 var _question_label: Label
 var _answers_box: VBoxContainer
 
@@ -81,7 +80,6 @@ func _next_question() -> void:
 	# The Yes/No honesty question keeps its order; the others shuffle so room order never repeats.
 	if shuffle_answers and question.get("type") == QuizData.TYPE_SCORED:
 		_shown_answers.shuffle()
-	_progress_label.text = "%d / %d" % [_index + 1, _questions.size()]
 	_question_label.text = str(question.get("text", ""))
 	_clear_answers()
 	for i in _shown_answers.size():
@@ -97,8 +95,6 @@ func _finish() -> void:
 
 
 func _show_intro() -> void:
-	_progress_label.text = ""
-	_question_label.text = "Before we begin…\nWhat's your type? Take this quick personality quiz!"
 	_clear_answers()
 	_add_button("Start", start)
 
@@ -118,10 +114,8 @@ func _build_ui() -> void:
 	column.add_theme_constant_override("separation", 24)
 	center.add_child(column)
 
-	_progress_label = _make_label(16)
 	_question_label = _make_label(30)
 	_question_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	column.add_child(_progress_label)
 	column.add_child(_question_label)
 
 	_answers_box = VBoxContainer.new()
