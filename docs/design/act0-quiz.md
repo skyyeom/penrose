@@ -4,6 +4,8 @@
 >
 > **Question this doc answers:** what should the opening quiz ask so that it quietly finds out **whose approval matters most** to the player, **what they value**, and **how they react to criticism**, while feeling like a random, harmless personality quiz? It must work for male and female players alike.
 >
+> **v2.1:** removed the spilled-water question; criticism style is now measured in play (§6.2).
+>
 > **v2 changes:** questions are now indirect (no mention of parents, friends, work or followers); rooms updated to Family, Friends & Partner, Society, Social Media + Bathroom; added a final yes/no honesty question.
 
 ---
@@ -46,7 +48,7 @@ Asking directly ("Whose approval matters to you?") gets the answer people *want*
 | --- | --- | --- | --- | --- |
 | **A** | **Whose approval matters** | Family · Close · Society · Social Media · Self | SATAQ-4R pressure sources; Contingencies of Self-Worth (Crocker et al., 2003) | **Room loudness** |
 | **B** | **What you value** | Relationships · Achievement/Status · Appearance · Recognition · Independence | Contingencies of Self-Worth; Schwartz's values | What each room *promises* in exchange for an upgrade |
-| **C** | **How you react to criticism** | Internalize · Comply · Defend · Avoid · Self-compassion | Self-Compassion Scale (Neff, 2003); Fear of Negative Evaluation (Leary, 1983); body-dysmorphia safety behaviors (Wilhelm, Phillips & Steketee, 2013) | **How NPCs pressure you** (§6.2) |
+| **C** | **How you react to criticism** | Internalize · Comply · Defend · Avoid · Self-compassion | Self-Compassion Scale (Neff, 2003); Fear of Negative Evaluation (Leary, 1983); body-dysmorphia safety behaviors (Wilhelm, Phillips & Steketee, 2013) | **How NPCs pressure you** (§6.2). **Measured in play, not in the quiz** (§6.2) |
 | **D** | **Which appearance ideal you've absorbed** | Leaner · Stronger · Flawless skin · Sharper features · Taller · Not appearance-focused | SATAQ-4R internalization; Drive for Muscularity Scale (McCreary & Sasse, 2000) | **First upgrade path** |
 | **E** | **Self-checking and comparison** | Low → high | Physical Appearance Comparison Scale-R (Schaefer & Thompson, 2014); body surveillance (McKinley & Hyde, 1996) | Starting Self-Perception; how often the Bathroom "calls" you |
 | **F** | **Core belief** | not good enough · unlovable · a burden · invisible · a fake | CBT downward arrow (Beck; Burns); Young schemas (defectiveness, approval-seeking, social isolation) | What **the Reflection** says in Loops 3–4 |
@@ -66,25 +68,24 @@ All wording is original. Answers are shown **without** their hidden meaning; the
 | **Q2** | *Which sound would you most like to wake up to?* | Someone cooking in the next room → **Family** · A voice message from someone who misses you → **Close** · Your alarm, exactly on time, nothing missed → **Society**, Achievement · A phone buzzing with notifications → **Social Media** · Rain, and nowhere you have to be → **Self** | Projective symbol · **A, B** |
 | **Q3** | *You find a dusty box in an attic. What do you hope is inside?* | Old report cards someone kept all these years → **Family** · Notes folded into tiny squares → **Close** · Your first name badge → **Society** · An old phone full of photos → **Social Media** · A diary with a little lock → **Self** | Projective symbol · **A** |
 | **Q4** | *Which animal would you be for a day?* | A deer → leaner · A tiger → stronger · A swan → flawless skin · A fox → sharper features · A giraffe → taller · A sloth → not appearance-focused | Projective symbol · **D**. *The fox quietly foreshadows the Gumiho* |
-| **Q5** | *Right before you head out, you spill water on your clothes. You…* | Change into something else, even if it makes you late → **Comply** · Cancel; it's a sign → **Avoid** · Glare at the table like it did it on purpose → **Defend** · "Of course this happens to me" → **Internalize** · Dab it, laugh, go → **Self-compassion** | Everyday scenario · **C** |
-| **Q6** | *You're alone in an elevator with mirrored walls. Where do your eyes go?* | Your reflection → high self-checking · The other reflections in the reflection → high comparison · Your phone → **Social Media**, low checking · The floor numbers → low · The floor → avoidance | Everyday scenario · **E** |
-| **Q7** | *Ten years from now, you mail yourself a postcard. What's on the front?* | A long table, everyone raising a glass → **Family**, Relationships · An inside joke only a few people get → **Close**, Relationships · A city skyline seen from the top floor → **Society**, Achievement/Status · A crowd, and you on a stage → **Social Media**, Recognition · A small quiet place you chose yourself → **Self**, Independence | Miracle question, made indirect · **A, B** |
-| **Q8** | *At a buffet, you…* | Glance at what everyone else picked first → high comparison · Take a photo before the first bite → **Social Media** · Let whoever you came with choose for you → **Close** · Do a full lap to find the very best option → perfectionism · Go straight for what you love → **Self**, low comparison | Everyday scenario · **A, E** |
-| **Q9** | *In a story, the main character comes home after many years away. Who do they hope is waiting?* | An old woman on the porch → **Family** · Someone at the station with two coffees → **Close** · Someone who once said they'd never make it → **Society** · Half the town, phones out → **Social Media** · Nobody; they want to walk the streets alone first → **Self** | Projective story (about a character, not you) · **A** |
-| **Q10** | *Which line in a movie would stay with you?* | "Look how well you turned out." → **Family** · "I'm always myself around you." → **Close** · "We could really use someone like you." → **Society**, Achievement · "Wait, everyone needs to see this." → **Social Media**, Appearance · "You seem at peace." → **Self** | Projective sentence · **A, B** |
-| **Q11** | *A paper doll is left out in the rain. What is it most afraid of?* | Not being pretty enough to keep → **not good enough** · Nobody wanting to play with it → **unlovable** · Taking up space in the box → **a burden** · Being forgotten under the bed → **invisible** · Someone noticing it's only paper → **a fake** | Projective downward arrow · **F**. *Ties into the customization theme* |
-| **Q12** | *If you took a selfie right now, how many stars would you give it?* | 0–10 slider | Scaling question · **G** |
-| **Q13** | *One last thing. Did you answer honestly?* | **Yes** · **No** | Honesty check · **I** (see §5) |
+| **Q5** | *You're alone in an elevator with mirrored walls. Where do your eyes go?* | Your reflection → high self-checking · The other reflections in the reflection → high comparison · Your phone → **Social Media**, low checking · The floor numbers → low · The floor → avoidance | Everyday scenario · **E** |
+| **Q6** | *Ten years from now, you mail yourself a postcard. What's on the front?* | A long table, everyone raising a glass → **Family**, Relationships · An inside joke only a few people get → **Close**, Relationships · A city skyline seen from the top floor → **Society**, Achievement/Status · A crowd, and you on a stage → **Social Media**, Recognition · A small quiet place you chose yourself → **Self**, Independence | Miracle question, made indirect · **A, B** |
+| **Q7** | *At a buffet, you…* | Glance at what everyone else picked first → high comparison · Take a photo before the first bite → **Social Media** · Let whoever you came with choose for you → **Close** · Do a full lap to find the very best option → perfectionism · Go straight for what you love → **Self**, low comparison | Everyday scenario · **A, E** |
+| **Q8** | *In a story, the main character comes home after many years away. Who do they hope is waiting?* | An old woman on the porch → **Family** · Someone at the station with two coffees → **Close** · Someone who once said they'd never make it → **Society** · Half the town, phones out → **Social Media** · Nobody; they want to walk the streets alone first → **Self** | Projective story (about a character, not you) · **A** |
+| **Q9** | *Which line in a movie would stay with you?* | "Look how well you turned out." → **Family** · "I'm always myself around you." → **Close** · "We could really use someone like you." → **Society**, Achievement · "Wait, everyone needs to see this." → **Social Media**, Appearance · "You seem at peace." → **Self** | Projective sentence · **A, B** |
+| **Q10** | *A paper doll is left out in the rain. What is it most afraid of?* | Not being pretty enough to keep → **not good enough** · Nobody wanting to play with it → **unlovable** · Taking up space in the box → **a burden** · Being forgotten under the bed → **invisible** · Someone noticing it's only paper → **a fake** | Projective downward arrow · **F**. *Ties into the customization theme* |
+| **Q11** | *If you took a selfie right now, how many stars would you give it?* | 0–10 slider | Scaling question · **G** |
+| **Q12** | *One last thing. Did you answer honestly?* | **Yes** · **No** | Honesty check · **I** (see §5) |
 
-**Length:** 13 screens, about 3–4 minutes (within PRD P0 #1's ≤ 5 min).
+**Length:** 12 screens, about 3 minutes (within PRD P0 #1's ≤ 5 min).
 
-**Coverage check (approval sources):** Family Q1, Q2, Q3, Q7, Q9, Q10 (6) · Close Q1, Q2, Q3, Q7, Q8, Q9, Q10 (7) · Society Q1, Q2, Q3, Q7, Q9, Q10 (6) · Social Media Q1, Q2, Q3, Q6, Q7, Q8, Q9, Q10 (8) · Self Q1, Q2, Q3, Q7, Q8, Q9, Q10 (7).
+**Coverage check (approval sources):** Family Q1, Q2, Q3, Q6, Q8, Q9 (6) · Close Q1, Q2, Q3, Q6, Q7, Q8, Q9 (7) · Society Q1, Q2, Q3, Q6, Q8, Q9 (6) · Social Media Q1, Q2, Q3, Q5, Q6, Q7, Q8, Q9 (8) · Self Q1, Q2, Q3, Q6, Q7, Q8, Q9 (7).
 
 **Why the symbols are believable:** they follow what each source *offers*. Family = care, history, being kept (windowsill, report cards, the porch). Close = being known by a few (notes, inside jokes, two coffees). Society = performance and position (glass lobby, name badge, top floor). Social Media = being seen by many (photographed café, notifications, crowd). Self = choosing for yourself (wild garden, diary, a place you chose).
 
 ---
 
-## 5. The honesty question (Q13)
+## 5. The honesty question (Q12)
 
 **Why ask it:** online surveys use a "did you answer honestly?" item to catch careless or performed answers (Meade & Craig, 2012). On its own it's a weak check, since most people say "yes", so Penrose uses it alongside answer timing (H). A simple **Yes / No** is enough: the point is the moment of being asked, not a precise measurement.
 
@@ -105,12 +106,14 @@ All wording is original. Answers are shown **without** their hidden meaning; the
 
 ### 6.1 Approval profile → room loudness
 
-- Add up each source's points, soften them if Q13 is **No** (§5), and normalize to percentages that sum to 100%. Example: **Family 35% · Society 25% · Social Media 20% · Close 15% · Self 5%**.
+- Add up each source's points, soften them if Q12 is **No** (§5), and normalize to percentages that sum to 100%. Example: **Family 35% · Society 25% · Social Media 20% · Close 15% · Self 5%**.
 - **Room loudness** follows the four outside sources (Family, Close, Society, Social Media). Louder means more frequent, more intense and more personal demands.
 - **Self** raises starting **Authenticity** and doesn't make any room louder.
 - **Ties:** if the top two outside sources are within 10 points, both rooms are "loud".
 
 ### 6.2 Criticism style → how NPCs pressure you
+
+Criticism style is **not asked in the quiz**. A single quiz question would be unreliable, and what players *do* says more than what they say they'd do. Instead, the first criticism the protagonist receives in each Loop 1 room offers five responses (accept it and feel bad, fix it, push back, change the subject or leave, shrug it off kindly). The most frequent response becomes the player's style, and from Loop 2 the NPCs adapt to it. Until then, the rooms use the **Comply** tactic, which suits the "harmless self-improvement" surface of Loop 1. The same responses feed the in-play **self-compassion** measure from the concept doc.
 
 | Player's style | What the NPCs do (all four rooms) |
 | --- | --- |
@@ -124,8 +127,8 @@ All wording is original. Answers are shown **without** their hidden meaning; the
 
 | Hidden stat | Starting value comes from |
 | --- | --- |
-| **Self-Perception** | Q12, lowered by high self-checking and comparison (Q6, Q8) |
-| **Authenticity** | Self score + self-compassion (Q5); −1 if Q13 is No |
+| **Self-Perception** | Q11, lowered by high self-checking and comparison (Q5, Q7) |
+| **Authenticity** | Self score; −1 if Q12 is No |
 | **Exhaustion** | 0 for everyone |
 
 ### 6.4 What carries forward
@@ -133,9 +136,9 @@ All wording is original. Answers are shown **without** their hidden meaning; the
 | Quiz result | Used later |
 | --- | --- |
 | Appearance ideal (Q4) | First upgrade path offered, for either protagonist |
-| Core belief (Q11) | The Reflection's lines in Loops 3–4 |
-| Baseline (Q12) | Asked again in the Bathroom mirror each loop and at the ending |
-| Honesty (Q13) | Quoted back by the Reflection in Loop 3, and shown in the ending summary |
+| Core belief (Q10) | The Reflection's lines in Loops 3–4 |
+| Baseline (Q11) | Asked again in the Bathroom mirror each loop and at the ending |
+| Honesty (Q12) | Quoted back by the Reflection in Loop 3, and shown in the ending summary |
 | Approval profile | Ending summary: "whose approval you were chasing" |
 
 ---
