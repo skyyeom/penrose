@@ -385,4 +385,4 @@ Selected from a scan of **186 Steam games released in 2024–25** tagged Psychol
 - Review-based sales estimates count **English reviews only**, so Asian-market titles are under-counted.
 - YouTube and Twitch figures are a single snapshot (27 Oct 2026); TikTok views were not measured.
 - Korean cosmetic-surgery figures need peer-reviewed or ISAPS sources before public use.
-- **Next:** interview 5–8 people matching P1–P3 to validate the personas.
+- **Next:** interview people matching P1–P3 to validate the personas. Kit: [player research](01-player-research/README.md) (#28). Detailed personas: [User Persona Profiles](01-user-personas.md) (#26).
